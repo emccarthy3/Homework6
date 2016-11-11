@@ -13,6 +13,8 @@ import java.awt.GridLayout;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import javax.naming.Context;
+import javax.naming.InitialContext;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
@@ -24,6 +26,7 @@ import javax.swing.JSeparator;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 import javax.swing.SwingUtilities;
+
 
 /**
  * Application which contains the main method that when run causes a GUI(s) to
@@ -77,7 +80,22 @@ public class FunctionGuiApplication extends JFrame implements Observer {
 
 		JFrame minAbsSum = new FunctionGuiApplication(minAbsSumFunction);
 		minAbsSum.setLocation(330, 0);
-
+	//WE GOTTA DO THIS SHIT
+	/*	System.setProperty("java.security.policy", "client.policy");
+	    System.setSecurityManager(new SecurityManager());
+	    String url = "rmi://localhost/";
+	    if (args.length == 1) {
+	      url = "rmi://" + args[0] + "/";
+	    }
+	    // change to "rmi://yourserver.com/"
+	    // when server runs on remote machine yourserver.com
+	    try {
+	      Context namingContext = new InitialContext();
+	      Dell c1 = (Dell) namingContext.lookup(url + "dellFunction");
+	    }
+	 
+		FunctionGuiApplication guiApplication = new FunctionGuiApplication(c1);
+		*/
 	}
 
 	/**
@@ -204,6 +222,7 @@ public class FunctionGuiApplication extends JFrame implements Observer {
 		// resultTextField.setText(arg.toString());
 
 		for (int i = 0; i < textFields.size(); ++i) {
+		
 			textFields.get(i).setText(function.getInputValues().get(i) + "");
 		}
 		

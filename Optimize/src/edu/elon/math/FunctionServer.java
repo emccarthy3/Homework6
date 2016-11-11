@@ -11,9 +11,10 @@ public class FunctionServer {
 		Function dellFunction = new Dell();
 		Function minAbsSumFunction = new MinimumAbsoluteSum();
 		String inputText = "";
-	    FunctionGuiApplication samsClient = new FunctionGuiApplication(samsFunction);
+	   /* FunctionGuiApplication samsClient = new FunctionGuiApplication(samsFunction);
 	    FunctionGuiApplication dellClient = new FunctionGuiApplication(dellFunction);
 	    FunctionGuiApplication minClient = new FunctionGuiApplication(minAbsSumFunction);
+	    */
 	    dellFunction.setTextFields(textFields);
 		samsFunction.setTextFields(textFields);
 		minAbsSumFunction.setTextFields(textFields);

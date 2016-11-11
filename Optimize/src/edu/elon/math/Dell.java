@@ -107,8 +107,9 @@ private ArrayList<JTextField> textfields;
 		}
 
 		this.setOutput(new Double(lsq));
-		setTextFields(textfields);
+		notifyObserver();
 		return this.getOutput();
+		
 
 	}
 
